@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="style.css">
     <title>Loan Calculator</title>
   </head>
   <body class="bg-dark">
@@ -26,7 +27,7 @@
             <form id="loan-form">
               <div class="form-group">
                 <div class="input-group">
-                  <span class="input-group-append">£</span>
+                  <span class="input-group-text">£</span>
                   <input
                     type="number"
                     class="form-control"
@@ -38,7 +39,7 @@
               <!-- interest -->
               <div class="form-group">
                 <div class="input-group">
-                  <span class="input-group-addon">%</span>
+                  <span class="input-group-text">%</span>
                   <input
                     type="number"
                     class="form-control"
@@ -56,10 +57,57 @@
                 />
               </div>
               <div class="forn-group">
-                  <input type="submit" value="calculate" class="btn btn-info btn-block">
+                <input
+                  type="submit"
+                  value="calculate"
+                  class="btn btn-info btn-block"
+                />
               </div>
             </form>
-            
+            <!--  LOADER  -->
+            <!-- <div id="loading">
+                <img class="loader m-5" src="img/loading.gif" alt="">
+            </div> -->
+            <!-- RESULTS -->
+            <div id="results" class="pt-4">
+              <h4>Results</h4>
+              <!-- Monthly Payment -->
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="monthly-payment"
+                    disabled
+                    placeholder="Monthly Payment"
+                  />
+                </div>
+              </div>
+              <!-- Total Payment -->
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-payment"
+                    disabled
+                    placeholder="Total Payment"
+                  />
+                </div>
+              </div>
+              <!-- Total Interest -->
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-interest"
+                    disabled
+                    placeholder="Total Interest"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -80,5 +128,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
